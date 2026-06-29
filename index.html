@@ -6,13 +6,12 @@
     <title>Dear Yu Flower 友熙花苑｜頂級客製化鈔票花束藝術、發財樹、祝壽精品</title>
     <meta name="description" content="大台北地區首選頂級客製化鈔票花束工作室。Dear Yu Flower 友熙花苑獨家真鈔無損工藝，結合法式精品級包材，打造百萬有錢花束、祝壽真鈔盆花、發財樹與奢華鈔票蛋糕。全台專車尊榮安全配送。">
     
-    <!-- LocalBusiness & Product SEO 結構化資料 (Schema Markup) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Dear Yu Flower 友熙花苑",
-      "image": "./dear-yu-hero.jpg",
+      "image": "./hero.jpg",
       "telephone": "@dearyuflower",
       "address": {
         "@type": "PostalAddress",
@@ -20,17 +19,12 @@
         "addressRegion": "台灣",
         "postalCode": "105"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "25.0500",
-        "longitude": "121.5500"
-      },
       "url": "https://www.dearyuflower.com",
       "priceRange": "$$$$"
     }
     </script>
 
-    <!-- 核心外掛矩陣 -->
+    <!-- 核心外掛 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -52,7 +46,6 @@
         .bg-luxury-ink { background: #3D2B26; }
         .border-gold-30 { border-color: rgba(184,153,90,0.3); }
 
-        /* 貝氏曲線精品動效 */
         .btn-gold {
             background: #B8995A;
             color: white;
@@ -77,50 +70,43 @@
             transition: 0.8s ease;
         }
         .image-card:hover img { transform: scale(1.06); }
-        
         [x-cloak] { display: none !important; }
     </style>
 </head>
 
 <body x-data="{ mobileMenuOpen: false, activeTab: 'all', lightboxOpen: false, lightboxImg: '', lightboxAlt: '' }">
 
-    <!-- 頂級安全導航欄 (整合手機版最佳化) -->
+    <!-- 導航欄 -->
     <nav class="fixed top-0 w-full z-[100] bg-white/90 backdrop-blur-lg border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl md:text-2xl font-bold tracking-[0.2em] text-[#8C6259] hover:text-gold transition">
                 Dear Yu Flower
             </a>
-            
-            <!-- 桌機導航 -->
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-sm tracking-widest hover:text-gold transition">品牌理念</a>
                 <a href="#collection" class="text-sm tracking-widest hover:text-gold transition">高訂系列</a>
-                <a href="#instagram" class="text-sm tracking-widest hover:text-gold transition">作品牆</a>
+                <a href="#gallery" class="text-sm tracking-widest hover:text-gold transition">工藝美學</a>
                 <a href="#reviews" class="text-sm tracking-widest hover:text-gold transition">奢華客評</a>
                 <a href="#faq" class="text-sm tracking-widest hover:text-gold transition">常見問題</a>
                 <a href="https://www.instagram.com/" target="_blank" class="text-pink-600 text-lg"><i class="fa-brands fa-instagram"></i></a>
             </div>
-
-            <!-- 手機版漢堡選單按鈕 -->
             <button @click="mobileMenuOpen = !mobileMenuOpen" class="block md:hidden text-2xl text-[#3D2B26] focus:outline-none">
                 <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
             </button>
         </div>
-
-        <!-- 手機版展開選單 -->
         <div x-show="mobileMenuOpen" x-transition x-cloak class="md:hidden bg-white border-b border-gray-100 px-6 py-4 space-y-4">
             <a href="#about" @click="mobileMenuOpen = false" class="block text-sm tracking-widest font-medium py-2">品牌理念</a>
             <a href="#collection" @click="mobileMenuOpen = false" class="block text-sm tracking-widest font-medium py-2">高訂系列</a>
-            <a href="#instagram" @click="mobileMenuOpen = false" class="block text-sm tracking-widest font-medium py-2">作品牆</a>
+            <a href="#gallery" @click="mobileMenuOpen = false" class="block text-sm tracking-widest font-medium py-2">工藝美學</a>
             <a href="#reviews" @click="mobileMenuOpen = false" class="block text-sm tracking-widest font-medium py-2">奢華客評</a>
             <a href="#faq" @click="mobileMenuOpen = false" class="block text-sm tracking-widest font-medium py-2">常見問題</a>
         </div>
     </nav>
 
-    <!-- 1. 首頁 Hero 全螢幕大圖 -->
+    <!-- 1. Hero 區塊 (修正對齊：hero.jpg) -->
     <section class="relative min-h-screen flex items-center justify-center bg-luxury-ink">
         <div class="absolute inset-0 z-0">
-            <img src="./dear-yu-hero.jpg" class="w-full h-full object-cover opacity-50" alt="Dear Yu Flower 品牌主視覺">
+            <img src="./hero.jpg" class="w-full h-full object-cover opacity-50" alt="Dear Yu Flower 品牌主視覺">
         </div>
         <div class="relative z-10 text-white text-center px-6 max-w-5xl" data-aos="fade-up" data-aos-duration="1200">
             <span class="text-gold tracking-[0.5em] text-xs uppercase mb-6 block font-light">The Haute Couture of Flower Art</span>
@@ -144,7 +130,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm font-light tracking-widest leading-loose">
                 <div class="space-y-3">
                     <p>🕒 諮詢時間：11:00 - 20:00</p>
-                    <p>● 每束花皆為資深花藝師全客製化設計</p>
+                    <p>● 每束花皆為資死花藝師全客製化設計</p>
                     <p>● 標價均為純包裝設計費，不含真鈔本金</p>
                 </div>
                 <div class="space-y-3 text-white/80">
@@ -156,7 +142,7 @@
         </div>
     </section>
 
-    <!-- 品牌理念 -->
+    <!-- 品牌理念 (修正對齊：concept.jpg) -->
     <section id="about" class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div data-aos="fade-right">
             <h3 class="text-gold tracking-widest uppercase italic text-sm mb-4">Brand Philosophy</h3>
@@ -170,46 +156,42 @@
             </div>
         </div>
         <div class="image-card shadow-xl h-[350px] md:h-[500px]" data-aos="fade-left">
-            <img src="./dear-yu-concept.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="品牌工藝現場細節">
+            <img src="./concept.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="品牌工藝美學">
         </div>
     </section>
 
-    <!-- 2. 商品分類與微距放大 (花束／蛋糕／發財樹／祝壽) -->
+    <!-- 2. 商品分類與微距放大 (修正對齊：product1.jpg, product2.jpg, product3.jpg) -->
     <section id="collection" class="py-24 bg-[#F8F6F1] px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h3 class="text-gold tracking-widest uppercase text-sm mb-3 italic">Haute Couture Collection</h3>
                 <h2 class="text-3xl md:text-5xl font-bold tracking-widest mb-4">經典高訂系列</h2>
-                <p class="text-gray-500 font-light tracking-widest text-sm">手工不折損真鈔 ‧ 頂級法式美學對齊</p>
             </div>
 
-            <!-- 分類標籤頁切換 -->
             <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12" data-aos="fade-up">
                 <button @click="activeTab = 'all'" :class="activeTab === 'all' ? 'bg-luxury-ink text-white' : 'bg-white text-luxury-ink border border-gray-200'" class="px-6 py-2.5 rounded-full text-sm tracking-widest transition">全部精品</button>
                 <button @click="activeTab = 'bouquet'" :class="activeTab === 'bouquet' ? 'bg-luxury-ink text-white' : 'bg-white text-luxury-ink border border-gray-200'" class="px-6 py-2.5 rounded-full text-sm tracking-widest transition">鈔票花束</button>
                 <button @click="activeTab = 'cake'" :class="activeTab === 'cake' ? 'bg-luxury-ink text-white' : 'bg-white text-luxury-ink border border-gray-200'" class="px-6 py-2.5 rounded-full text-sm tracking-widest transition">奢華蛋糕</button>
                 <button @click="activeTab = 'tree'" :class="activeTab === 'tree' ? 'bg-luxury-ink text-white' : 'bg-white text-luxury-ink border border-gray-200'" class="px-6 py-2.5 rounded-full text-sm tracking-widest transition">有錢發財樹</button>
-                <button @click="activeTab = 'celebrate'" :class="activeTab === 'celebrate' ? 'bg-luxury-ink text-white' : 'bg-white text-luxury-ink border border-gray-200'" class="px-6 py-2.5 rounded-full text-sm tracking-widest transition">頂級祝壽</button>
             </div>
 
-            <!-- 商品網格矩陣 (整合 3. 商品點進去可放大 與 4. LINE一鍵下單) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- 商品 1 -->
                 <div x-show="activeTab === 'all' || activeTab === 'bouquet'" class="bg-white rounded-3xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="zoom-in">
                     <div class="image-card aspect-[3/4] mb-4">
-                        <img src="./prod-1.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="霸氣寵妻 ‧ 炭焙玫瑰金百張大花束">
+                        <img src="./product1.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="霸氣寵妻 ‧ 炭焙玫瑰金大花束">
                     </div>
                     <div>
-                        <h4 class="text-lg font-bold mb-1">炭焙玫瑰金百張大束</h4>
+                        <h4 class="text-lg font-bold mb-1">炭焙玫瑰金大花束</h4>
                         <p class="text-xs text-gold tracking-widest mb-4">NT$ 8,800 起 (不含真鈔本金)</p>
-                        <a href="https://line.me/R/ti/p/%40dearyuflower?text=我想諮詢：炭焙玫瑰金百張大束" target="_blank" class="block text-center bg-brand-rose text-white text-xs py-3 rounded-full font-bold tracking-widest hover:opacity-90 transition"><i class="fa-brands fa-line mr-1"></i> 立即 LINE 詢價</a>
+                        <a href="https://line.me/R/ti/p/%40dearyuflower?text=我想諮詢：炭焙玫瑰金大花束" target="_blank" class="block text-center bg-brand-rose text-white text-xs py-3 rounded-full font-bold tracking-widest hover:opacity-90 transition"><i class="fa-brands fa-line mr-1"></i> 立即 LINE 詢價</a>
                     </div>
                 </div>
 
                 <!-- 商品 2 -->
                 <div x-show="activeTab === 'all' || activeTab === 'cake'" class="bg-white rounded-3xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
                     <div class="image-card aspect-[3/4] mb-4">
-                        <img src="./prod-2.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="雙層極奢 ‧ 滿滿面額真鈔雙層蛋糕花">
+                        <img src="./product2.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="雙層極奢 ‧ 滿滿面額真鈔雙層蛋糕花">
                     </div>
                     <div>
                         <h4 class="text-lg font-bold mb-1">雙層極奢鈔票蛋糕</h4>
@@ -221,7 +203,7 @@
                 <!-- 商品 3 -->
                 <div x-show="activeTab === 'all' || activeTab === 'tree'" class="bg-white rounded-3xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
                     <div class="image-card aspect-[3/4] mb-4">
-                        <img src="./prod-3.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="金玉滿堂 ‧ 開幕招財水晶有錢發財樹">
+                        <img src="./product3.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="金玉滿堂 ‧ 開幕招財水晶有錢發財樹">
                     </div>
                     <div>
                         <h4 class="text-lg font-bold mb-1">招財水晶有錢發財樹</h4>
@@ -229,36 +211,24 @@
                         <a href="https://line.me/R/ti/p/%40dearyuflower?text=我想諮詢：招財水晶有錢發財樹" target="_blank" class="block text-center bg-brand-rose text-white text-xs py-3 rounded-full font-bold tracking-widest hover:opacity-90 transition"><i class="fa-brands fa-line mr-1"></i> 立即 LINE 詢價</a>
                     </div>
                 </div>
-
-                <!-- 商品 4 -->
-                <div x-show="activeTab === 'all' || activeTab === 'celebrate'" class="bg-white rounded-3xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="image-card aspect-[3/4] mb-4">
-                        <img src="./prod-4.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="福壽雙全 ‧ 長輩壽宴頂級百萬誠意祝壽花盆">
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold mb-1">福壽雙全真鈔祝壽盆花</h4>
-                        <p class="text-xs text-gold tracking-widest mb-4">NT$ 9,600 起 (不含真鈔本金)</p>
-                        <a href="https://line.me/R/ti/p/%40dearyuflower?text=我想諮詢：福壽雙全真鈔祝壽盆花" target="_blank" class="block text-center bg-brand-rose text-white text-xs py-3 rounded-full font-bold tracking-widest hover:opacity-90 transition"><i class="fa-brands fa-line mr-1"></i> 立即 LINE 詢價</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Instagram 作品牆 -->
-    <section id="instagram" class="py-24 bg-white px-6">
+    <!-- 5. 工藝現場 Gallery (修正對齊：gallery1~gallery5) -->
+    <section id="gallery" class="py-24 bg-white px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h3 class="text-gold tracking-widest uppercase text-sm mb-3 italic"><i class="fa-brands fa-instagram mr-1"></i> Live Portfolio</h3>
-                <h2 class="text-3xl md:text-5xl font-bold tracking-widest mb-4">Instagram 現場美學</h2>
-                <p class="text-gray-500 font-light tracking-widest text-sm">追蹤隨時更新的奢華高訂日常：<span class="text-[#8C6259] font-medium">@dearyuflower</span></p>
+                <h3 class="text-gold tracking-widest uppercase text-sm mb-3 italic">Craftsmanship</h3>
+                <h2 class="text-3xl md:text-5xl font-bold tracking-widest mb-4">工藝現場美學</h2>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="image-card aspect-square shadow-sm"><img src="./ig-1.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="IG精選：百萬求婚鈔票花現場"></div>
-                <div class="image-card aspect-square shadow-sm"><img src="./ig-2.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="IG精選：頂級不凋花包材細節"></div>
-                <div class="image-card aspect-square shadow-sm"><img src="./ig-3.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="IG精選：專車尊榮安全配送實況"></div>
-                <div class="image-card aspect-square shadow-sm"><img src="./ig-4.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="IG精選：奢華虎年限定真鈔花束"></div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="image-card aspect-[3/4] shadow-sm"><img src="./gallery1.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="真鈔花藝細節 1"></div>
+                <div class="image-card aspect-[3/4] shadow-sm"><img src="./gallery2.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="真鈔花藝細節 2"></div>
+                <div class="image-card aspect-[3/4] shadow-sm"><img src="./gallery3.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="真鈔花藝細節 3"></div>
+                <div class="image-card aspect-[3/4] shadow-sm"><img src="./gallery4.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="真鈔花藝細節 4"></div>
+                <div class="image-card aspect-[3/4] shadow-sm"><img src="./gallery5.jpg" @click="lightboxOpen = true; lightboxImg = $el.src; lightboxAlt = $el.alt" alt="真鈔花藝細節 5"></div>
             </div>
         </div>
     </section>
@@ -269,37 +239,34 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h3 class="text-gold tracking-widest uppercase text-sm mb-3 italic">Customer Stories</h3>
                 <h2 class="text-3xl md:text-5xl font-bold tracking-widest mb-4">奢華客評</h2>
-                <p class="text-gray-500 font-light tracking-widest text-sm">來自大台北名流與高端客戶的真實感動回饋</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm" data-aos="fade-up">
                     <div class="flex text-amber-400 gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-gray-600 text-sm leading-loose mb-6">「原本擔心鈔票花會流於市俗，但友熙的作品完全是法式精品的級別！老婆在餐廳拆開時所有人都在看，面子裡子都賺足了，真鈔拆卸後完全沒有任何破損。」</p>
-                    <span class="text-xs font-bold tracking-widest text-[#3D2B26]">— 台北松山區 ‧ 林先生 (求婚訂製)</span>
+                    <p class="text-gray-600 text-sm leading-loose mb-6">「原本擔心鈔票花會流於市俗，但友熙的作品完全是法式精品級別！真鈔拆卸後完全沒有任何破損。」</p>
+                    <span class="text-xs font-bold tracking-widest text-[#3D2B26]">— 台北松山區 ‧ 林先生</span>
                 </div>
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex text-amber-400 gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-gray-600 text-sm leading-loose mb-6">「幫媽媽辦七十大壽時訂了祝壽盆花，長輩一看到高興得合不攏嘴。每一張百元鈔都折得像藝術品一樣精緻，專車送過來非常準時且包裝完美，大推！」</p>
-                    <span class="text-xs font-bold tracking-widest text-[#3D2B26]">— 台北大安區 ‧ 張小姐 (長輩祝壽)</span>
+                    <p class="text-gray-600 text-sm leading-loose mb-6">「幫媽媽辦七十大壽時訂了祝壽盆花，長輩一看到高興得合不攏嘴。專車送過來非常準時且包裝完美！」</p>
+                    <span class="text-xs font-bold tracking-widest text-[#3D2B26]">— 台北大安區 ‧ 張小姐</span>
                 </div>
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex text-amber-400 gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-gray-600 text-sm leading-loose mb-6">「公司合夥人開幕，送了有錢發財樹，擺在櫃檯非常大氣，大家都爭相合照。比起傳統的盆栽，這個更能祝賀開市大吉，非常有創意且工藝細緻。」</p>
-                    <span class="text-xs font-bold tracking-widest text-[#3D2B26]">— 新北板橋區 ‧ 陳總經理 (開幕誌慶)</span>
+                    <p class="text-gray-600 text-sm leading-loose mb-6">「公司合夥人開幕送了發財樹，擺在櫃檯非常大氣，大家都爭相合照。比起傳統盆栽更能祝賀開市大吉。」</p>
+                    <span class="text-xs font-bold tracking-widest text-[#3D2B26]">— 新北板橋區 ‧ 陳總經理</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. 常見問題 FAQ (優雅手風琴抽屜結構) -->
+    <!-- 7. 常見問題 FAQ -->
     <section id="faq" class="py-24 bg-[#F8F6F1] px-6" x-data="{ activeFaq: null }">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h3 class="text-gold tracking-widest uppercase text-sm mb-3 italic">Frequently Asked Questions</h3>
                 <h2 class="text-3xl md:text-5xl font-bold tracking-widest mb-4">常見問題</h2>
             </div>
-
             <div class="space-y-4">
                 <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
                     <button @click="activeFaq = (activeFaq === 0 ? null : 0)" class="w-full text-left px-6 py-5 font-bold flex justify-between items-center focus:outline-none">
@@ -307,27 +274,16 @@
                         <i class="fa-solid" :class="activeFaq === 0 ? 'fa-minus text-gold' : 'fa-plus text-gray-400'"></i>
                     </button>
                     <div x-show="activeFaq === 0" x-transition class="px-6 pb-5 text-sm text-gray-500 leading-loose border-t border-gray-50/50 pt-4">
-                        Dear Yu Flower 採用獨家研發的「高訂真鈔無損包裝工藝」，製程中絕不使用任何膠水、化學黏劑或會破壞紙鈔的固定件。客戶收到後可輕鬆拆解，紙鈔完好如新，絕不影響法定流通使用。
+                        Dear Yu Flower 採用獨家研發的「高訂真鈔無損包裝工藝」，製程中絕不使用任何膠水、化學黏劑。客戶收到後可輕鬆拆解，紙鈔完好如新。
                     </div>
                 </div>
-
                 <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
                     <button @click="activeFaq = (activeFaq === 1 ? null : 1)" class="w-full text-left px-6 py-5 font-bold flex justify-between items-center focus:outline-none">
                         <span>Q2. 請問網頁上的價格有包含裡面的鈔票本金嗎？</span>
                         <i class="fa-solid" :class="activeFaq === 1 ? 'fa-minus text-gold' : 'fa-plus text-gray-400'"></i>
                     </button>
                     <div x-show="activeFaq === 1" x-transition class="px-6 pb-5 text-sm text-gray-500 leading-loose border-t border-gray-50/50 pt-4">
-                        我們網站上所標示的價格均為「全客製化設計費與精品進口包材費用」，並不包含紙鈔本身的票面價值。真鈔本金可由您決定總面額後（如：百張百元鈔或五十張千元鈔），於排單確認後進行本金核對。
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
-                    <button @click="activeFaq = (activeFaq === 2 ? null : 2)" class="w-full text-left px-6 py-5 font-bold flex justify-between items-center focus:outline-none">
-                        <span>Q3. 大台北以外的地區可以配送嗎？需要提早幾天訂購？</span>
-                        <i class="fa-solid" :class="activeFaq === 2 ? 'fa-minus text-gold' : 'fa-plus text-gray-400'"></i>
-                    </button>
-                    <div x-show="activeFaq === 2" x-transition class="px-6 pb-5 text-sm text-gray-500 leading-loose border-t border-gray-50/50 pt-4">
-                        由於真鈔花藝具備極高價值，大台北地區由本苑配合的尊榮專車安全送達。外縣市部分大型花束或發財樹項目，我們會指派專屬長途運務或依特殊包材進行全台防護配送。因手工繁複，請務必至少提早 5 天完成 LINE 排單預約。
+                        我們網站上所標示的價格均為「全客製化設計費與精品進口包材費用」，並不包含紙鈔本身的票面價值。
                     </div>
                 </div>
             </div>
@@ -354,16 +310,16 @@
         <p class="opacity-50 text-[10px] tracking-[0.4em] uppercase">© Dear Yu Flower Studio | Designed by 然然設計</p>
     </footer>
 
-    <!-- 8. 原生防禦性高階燈箱元件 (Alpine.js 動態驅動) -->
-    <div x-show="lightboxOpen" x-transition x-cloak class="fixed inset-0 bg-black/95 z-[10000] flex justify-center items-center padding-[20px]" @click="lightboxOpen = false">
-        <span class="close-btn absolute top-5 right-8 text-white text-4xl cursor-pointer">&times;</span>
+    <!-- 燈箱元件 -->
+    <div x-show="lightboxOpen" x-transition x-cloak class="fixed inset-0 bg-black/95 z-[10000] flex justify-center items-center p-4" @click="lightboxOpen = false">
+        <span class="absolute top-5 right-8 text-white text-4xl cursor-pointer">&times;</span>
         <div class="max-w-4xl p-4" @click.stop>
             <img :src="lightboxImg" :alt="lightboxAlt" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-white/10">
             <p x-text="lightboxAlt" class="text-white/80 text-center text-sm tracking-widest mt-4 font-light"></p>
         </div>
     </div>
 
-    <!-- 必要動態腳本驅動 -->
+    <!-- 必要動態腳本 -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true, offset: 50 });
